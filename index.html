@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Your Friend Hiro</title>
+
 <style>
 body {
     margin: 0;
@@ -27,16 +28,17 @@ h2 {
     background: rgba(255,255,255,0.1);
     padding: 20px;
     border-radius: 15px;
-    width: 300px;
+    width: 320px;
 }
 
 textarea {
     width: 90%;
-    height: 100px;
+    height: 120px;
     border-radius: 10px;
     border: none;
     padding: 10px;
     resize: none;
+    font-size: 16px;
 }
 
 button {
@@ -48,41 +50,46 @@ button {
     color: #001f4d;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #ddd;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h2>Your friend Hiro</h2>
+<h2>Your Friend Hiro</h2>
 
 <div class="box">
-<textarea id="message" placeholder="Write your message..."></textarea>
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+<input type="hidden" name="subject" value="Message from Your Friend Hiro">
+
+<input type="hidden" name="from_name" value="Your Friend Hiro Website">
+
+<textarea
+name="message"
+placeholder="Write your message..."
+required></textarea>
+
 <br>
-<button onclick="sendMessage()">Send</button>
-</div>
+
+<button type="submit">Send</button>
+
+</form>
 
 </div>
 
-<script>
-function sendMessage(){
-    let msg = document.getElementById("message").value;
-
-    let email = "sorazzhaokip@gmail.com";
-    let subject = "Message from your friend Hiro";
-
-    window.location.href =
-    "mailto:" + email +
-    "?subject=" + subject +
-    "&body=" + encodeURIComponent(msg);
-}
-</script>
+</div>
 
 </body>
 </html>
